@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/commons-lang3-3.5.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/geotools"/>
+	<classpathentry kind="lib" path="lib/geotools/gt-api-10.5.jar"/>
+	<classpathentry kind="lib" path="lib/geotools/gt-epsg-hsql-10.5.jar"/>
+	<classpathentry kind="lib" path="lib/geotools/gt-main-10.5.jar"/>
+	<classpathentry kind="lib" path="lib/geotools/gt-metadata-10.5.jar"/>
+	<classpathentry kind="lib" path="lib/geotools/gt-opengis-10.5.jar"/>
+	<classpathentry kind="lib" path="lib/geotools/gt-referencing-10.5.jar"/>
+	<classpathentry kind="lib" path="lib/geotools/hsqldb-1.8.0.7.jar"/>
+	<classpathentry kind="lib" path="lib/geotools/jai_core-1.1.3.jar"/>
+	<classpathentry kind="lib" path="lib/geotools/jsr-275-1.0-beta-2.jar"/>
+	<classpathentry kind="lib" path="lib/geotools/jts-1.13.jar"/>
+	<classpathentry kind="lib" path="lib/geotools/vecmath-1.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/minimal-json-0.9.4.jar"/>
+	<classpathentry kind="lib" path="lib/3dcitydb-impexp.jar"/>
+	<classpathentry kind="lib" path="lib/sqlite-jdbc-3.16.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

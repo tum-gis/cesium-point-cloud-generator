@@ -1,1 +1,2 @@
-# cesium-point-cloud-generator
+# CesiumPointCloudGenerator
+test
