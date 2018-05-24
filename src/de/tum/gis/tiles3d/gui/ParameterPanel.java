@@ -173,7 +173,7 @@ public class ParameterPanel extends JPanel {
 		zScaleFactorPanel.setBorder(BorderFactory.createTitledBorder("Scale factor (0.0 - 1.0) for scaling the height of generated point cloud (blank will be interpreted as 1)"));
 		zOffsetPanel.setBorder(BorderFactory.createTitledBorder("zOffset for adjusting the height of generated point cloud (blank will be interpreted as 0)"));
 		tileSizePanel.setBorder(BorderFactory.createTitledBorder("The side length of tile on the highest LoD (default value 100 will be used if input is blank)"));	
-		maxNumOfPointsPerTilePanel.setBorder(BorderFactory.createTitledBorder("Maximum number of points of each tile on lower LODs (default value 5000 will be used if input is blank)"));
+		maxNumOfPointsPerTilePanel.setBorder(BorderFactory.createTitledBorder("Maximum number of points of each tile on lower LODs (default value 10000 will be used if input is blank)"));
 		outputPanel.setBorder(BorderFactory.createTitledBorder("Path of the output directory which will contain the generated point cloud tilesets"));
 		outputBrowseButton.setText("Browse");		
 		runButton.setText("Export");
@@ -295,7 +295,7 @@ public class ParameterPanel extends JPanel {
 			}
 		}	
 		
-		int maxNumOfPointsPerTile = 5000;
+		int maxNumOfPointsPerTile = 10000;
 		if (maxNumOfPointsPerTileInputField.getText().trim() != "") {
 			try {
 				maxNumOfPointsPerTile = Integer.parseInt(maxNumOfPointsPerTileInputField.getText().trim());
@@ -383,7 +383,7 @@ public class ParameterPanel extends JPanel {
 		zScaleFactorInputField.setText("0.3028");
 		SeparatorCharacterInputField.setText(" ");
 		colorBitSizeInputField.setText("16");
-		maxNumOfPointsPerTileInputField.setText("5000");
+		maxNumOfPointsPerTileInputField.setText("10000");
 		inputBrowseTextField.setText(new File("data" + File.separator + "sample_xyzRGB_data" + File.separator + "small").getAbsolutePath());
 		outputBrowserTextField.setText(new File("viewer" + File.separator + "output_data").getAbsolutePath());
 	}
