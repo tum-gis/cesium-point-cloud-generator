@@ -380,7 +380,7 @@ public class ParameterPanel extends JPanel {
 		tileSizeInputField.setText("100");
 		zOffsetInputField.setText("-400");
 		sridInputField.setText("2994");
-		zScaleFactorInputField.setText("0.3028");
+		zScaleFactorInputField.setText("0.3048");
 		SeparatorCharacterInputField.setText(" ");
 		colorBitSizeInputField.setText("16");
 		maxNumOfPointsPerTileInputField.setText("10000");
