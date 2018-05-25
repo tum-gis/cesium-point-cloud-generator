@@ -28,9 +28,9 @@ The project consists of several packages and folders, which are described as fol
 	```
 	
 3. A window appears, where all the program configurations are shown:
-<p align="center">
-  <img src="data/pics/GUI.png" title="GUI"/>
-</p>
+	<div align="center">
+	  <img src="data/pics/GUI.png" title="GUI"/>
+	</div>
 
 	These settings can be configured as follows:
 
@@ -44,7 +44,7 @@ The project consists of several packages and folders, which are described as fol
 	| Length unit scale factor (`0.0` - `1.0`) | Scales the height of generated point cloud between metric unit (meter - `1.0`) and other units (such as imperial units like inch - `0.0254`, foot - `0.3048` or yard - `0.9144`) | `0.3048` |
 	| Tile side length | Defines the side length (both height and width) in meters of tiles on the highest Level of Details (LoD) | `100` |
 	| Maximum number of points in each tile | Determines the maximum allowed number of points in each tile on lower LoDs, if a tile contains more points than this number, its points will be selected randomly until the maximum threshold is achieved | `10000` |
-	| Output path | Output folder that contains the generated point cloud tilesets | [viewer/ouput_data](viewer/ouput_data/)
+	| Output path | Output folder that contains the generated point cloud tilesets | [viewer/ouput_data](viewer/ouput_data/) |
 	
 4. Click `Export` to start the process. Logs will be shown in the debug area on the right-hand side of the GUI.
 
