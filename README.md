@@ -39,10 +39,10 @@ The project consists of several packages and folders, which are described as fol
 	| Input path  | Input folder that contains all the source data; the sample data included in this project were converted from LAS/LAZ format, which can be found [here](https://github.com/mattshax/cesium_pnt_generator) | [data/sample_xyzRGB_data/small](data/sample_xyzRGB_data/small) |
 	| Spatial Reference Identifier (SRID)  | Defines the SRID of the source data | `2994` |
 	| Separator character  | Defines the delimiter character used to separate point coordinates and `RGB` color values in each text line | Whitespace ("` `") |
-	| Color depth  | Determines the color depth (`8` or `16` bit) in the source data | `16` |
-	| Height offset | Adjusts the height of generated point cloud (blank will be interpreted as 0)| `-400` |
-	| Length unit scale factor (`0.0` - `1.0`) | Scales the height of generated point cloud between metric unit (meter - `1.0`) and other units (such as imperial units like inch - `0.0254`, foot - `0.3048` or yard - `0.9144`) | `0.3048` |
-	| Tile side length | Defines the side length (both height and width) in meters of tiles on the highest Level of Details (LoD) | `100` |
+	| Color depth  | Determines the color depth (`8` or `16` bit) per channel in the source data | `16` |
+	| Height offset | Adjusts the height of generated point cloud (blank will be interpreted as 0); the length unit is the same as in the given SRID | `-400` |
+	| Length unit scale factor (`0.0` - `1.0`) for heights | Scales the height of generated point cloud between metric unit (meter - `1.0`) and other units (such as imperial units like inch - `0.0254`, foot - `0.3048` or yard - `0.9144`) | `0.3048` |
+	| Tile side length | Defines the side length (both height and width) of each tile on the highest Level of Details (LoD); the length unit is the same as in the given SRID | `100` |
 	| Maximum number of points in each tile | Determines the maximum allowed number of points in each tile on lower LoDs, if a tile contains more points than this number, its points will be selected randomly until the maximum threshold is achieved | `10000` |
 	| Output path | Output folder that contains the generated point cloud tilesets | [viewer/ouput_data](viewer/ouput_data/) |
 	
