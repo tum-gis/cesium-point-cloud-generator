@@ -33,6 +33,8 @@ public class PntcQueryResult {
 	
 	private List<Coordinate> coordinateList;
 	private List<Color> colorList;
+	private List<Integer> densityList;
+	private List<Integer> heightList;
 	
 	public List<Coordinate> getCoordinateList() {
 		return coordinateList;
@@ -49,4 +51,21 @@ public class PntcQueryResult {
 	public void setColorList(List<Color> colorList) {
 		this.colorList = colorList;
 	}
+
+	public List<Integer> getDensityList(){
+		return densityList;
+	}
+
+	public void setDensityList(List<Integer> densityList){
+		this.densityList = densityList;
+	}
+
+	public List<Integer> getHeightList(){
+		return heightList;
+	}
+
+	public void setHeightList(List<Integer> heightList){
+		this.heightList = heightList;
+	}
+	
 }

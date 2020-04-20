@@ -401,6 +401,7 @@ public class ParameterPanel extends JPanel {
 	}
 	
 	private void initDefaultSettings() {
+<<<<<<< Updated upstream
 		tileSizeInputField.setText("100");
 		zOffsetInputField.setText("-400");
 		sridInputField.setText("2994");
@@ -410,6 +411,18 @@ public class ParameterPanel extends JPanel {
 		maxNumOfPointsPerTileInputField.setText("10000");
 		inputBrowseTextField.setText(new File("data" + File.separator + "sample_xyzRGB_data" + File.separator + "small").getAbsolutePath());
 		outputBrowserTextField.setText(new File("viewer" + File.separator + "output_data").getAbsolutePath());
+=======
+		tileSizeInputField.setText("100000");
+		zOffsetInputField.setText("0");
+		sridInputField.setText("4326");
+		zScaleFactorInputField.setText("1");
+		SeparatorCharacterInputField.setText(" ");
+		colorBitSizeInputField.setText("8");
+		maxNumOfPointsPerTileInputField.setText("10000");
+		inputBrowseTextField.setText(new File("data" + File.separator + "sample_xyzRGB_data" + File.separator + "new_4326_with_density").getAbsolutePath());
+		// outputBrowserTextField.setText(new File("viewer" + File.separator + "output_data").getAbsolutePath());
+		outputBrowserTextField.setText("C:\\Users\\Hulya\\Desktop\\Remote\\ion-poc\\output_data");
+>>>>>>> Stashed changes
 	}
 
 	private void errorMessage(String title, String text) {

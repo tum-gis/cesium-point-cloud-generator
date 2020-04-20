@@ -86,9 +86,8 @@ public class SqliteDBManager implements DBManager {
 				+ "x double, "
 				+ "y double, "
 				+ "z double, "
-				+ "r int, "
-				+ "g int, "
-				+ "b int)";
+				+ "density int, "
+				+ "height int)";
 		Statement stmt = null;
 		try {			
 			stmt = connection.createStatement();		
@@ -116,7 +115,7 @@ public class SqliteDBManager implements DBManager {
 	}
 	
 	public void importIntoDatabase(List<PointObject> pointList) throws SQLException {		
-		String sql = "insert into POINT_TABLE (x, y, z, r, g, b) values (?, ?, ?, ?, ?, ?)";
+		String sql = "insert into POINT_TABLE (x, y, z, density, height) values (?, ?, ?, ?, ?)";
 		PreparedStatement ps = null;
 		try {	
 			ps = connection.prepareStatement(sql);
@@ -126,9 +125,11 @@ public class SqliteDBManager implements DBManager {
 				ps.setDouble(1, pointObject.getX());
 				ps.setDouble(2, pointObject.getY());
 				ps.setDouble(3, pointObject.getZ());
-				ps.setInt(4, pointObject.getR());
-				ps.setInt(5, pointObject.getG());
-				ps.setInt(6, pointObject.getB());
+				// ps.setInt(4, pointObject.getR());
+				// ps.setInt(5, pointObject.getG());
+				// ps.setInt(6, pointObject.getB());
+				ps.setInt(4, pointObject.getDensity());
+				ps.setInt(5, pointObject.getHeight());
 				ps.addBatch();
 			}
 			ps.executeBatch();			
@@ -181,7 +182,9 @@ public class SqliteDBManager implements DBManager {
 				+ "y < " + maxY + " ORDER BY RANDOM() LIMIT " + numberLimit;
 		
 		List<Coordinate> coordinateList = new ArrayList<Coordinate>();
-		List<Color> colorList = new ArrayList<Color>();
+		// List<Color> colorList = new ArrayList<Color>();
+		List<Integer> densityList = new ArrayList<Integer>();
+		List<Integer> heightList = new ArrayList<Integer>();
 		try {	
 			stmt = connection.createStatement();
 			stmt.setFetchSize(fetchSize);
@@ -204,11 +207,17 @@ public class SqliteDBManager implements DBManager {
 	        	if (z > maxZ)
 	        		maxZ = z;   
 	        	
-	        	int r = result.getInt("r");
-	        	int g = result.getInt("g");
-	        	int b = result.getInt("b");
-	        	Color color = new Color(r, g, b);
-				colorList.add(color);
+	        	// int r = result.getInt("r");
+	        	// int g = result.getInt("g");
+	        	// int b = result.getInt("b");
+	        	// Color color = new Color(r, g, b);
+				// colorList.add(color);
+
+				int density = result.getInt("density");
+				densityList.add(density);
+
+				int height = result.getInt("height");
+				heightList.add(height);
 	        }
 						
 			if (coordinateList.size() == 0) {	
@@ -234,7 +243,10 @@ public class SqliteDBManager implements DBManager {
 		if (coordinateList.size() != 0) {
 			PntcQueryResult queryResult = new PntcQueryResult();
 			queryResult.setCoordinateList(coordinateList);
-			queryResult.setColorList(colorList);
+			// queryResult.setColorList(colorList);
+			queryResult.setDensityList(densityList);
+			queryResult.setHeightList(heightList);
+			
 			return queryResult;
 		}
 		else

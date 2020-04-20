@@ -204,19 +204,21 @@ public class PntcGenerator {
 					double x = Double.valueOf(valueArray[0]);
 					double y = Double.valueOf(valueArray[1]);
 					double z = (Double.valueOf(valueArray[2]) + config.getzOffset()) * config.getZScaleFactor();
+					int density = Integer.valueOf(valueArray[3]);
+					int height = Integer.valueOf(valueArray[2]);
 					
 					if (Double.valueOf(valueArray[2]) < minZ)
 						minZ = Double.valueOf(valueArray[2]);
 					
-					int colorScaleFactor = 1;
-					if (config.getColorBitSize() == 16)
-						colorScaleFactor = 256;
+					// int colorScaleFactor = 1;
+					// if (config.getColorBitSize() == 16)
+					// 	colorScaleFactor = 256;
 					
-					int r = Integer.valueOf(valueArray[3]) / colorScaleFactor;
-					int g = Integer.valueOf(valueArray[4]) / colorScaleFactor;
-					int b = Integer.valueOf(valueArray[5]) / colorScaleFactor;	
+					// int r = Integer.valueOf(valueArray[3]) / colorScaleFactor;
+					// int g = Integer.valueOf(valueArray[4]) / colorScaleFactor;
+					// int b = Integer.valueOf(valueArray[5]) / colorScaleFactor;	
 					
-					batchPointList.add(new PointObject(x, y, z, r, g, b, config.getSrid()));
+					batchPointList.add(new PointObject(x, y, z, density, height, config.getSrid()));
 					if (batchPointList.size() % SqliteDBManager.batchInsertionSize == 0) {
 						dbManager.importIntoDatabase(batchPointList);
 						batchPointList = new ArrayList<PointObject>();
