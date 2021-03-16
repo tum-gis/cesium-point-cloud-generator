@@ -101,7 +101,7 @@ public class PntcGenerator {
 				dbManager.createIndexes();	
 			} 		
 		} catch (Exception e) {		
-			throw new PntcGenerationException("Faild to read and import source data into the local temporary database.", e);		
+			throw new PntcGenerationException("Failed to read and import source data into the local temporary database.", e);
 		}
 		
 		BoundingBox2D globalBoundingbox;
@@ -111,7 +111,7 @@ public class PntcGenerator {
 			Logger.info("Calculating the global boundingbox of the input point data");
 			globalBoundingbox = dbManager.calculateGlobalBoundingbox();			
 		} catch (SQLException e) {
-			throw new PntcGenerationException("Faild to calculate global boundingbox from database.", e);
+			throw new PntcGenerationException("Failed to calculate global boundingbox from database.", e);
 		}		
 
 		TileSet tileset = new TileSet();
@@ -122,7 +122,7 @@ public class PntcGenerator {
 			double tileSize = config.getTileSize();			
 			tileset = generateTileset(globalBoundingbox, outputFolderPath, tileSize);
 		} catch (CoordinateConversionException e) {
-			throw new PntcGenerationException("Faild to construct 3D-Tiles data structure.", e); 
+			throw new PntcGenerationException("Failed to construct 3D-Tiles data structure.", e);
 		}
 
 		totalNumberOfTiles = new AtomicInteger(tileset.calculateNumberOfChildrenTiles());
@@ -150,7 +150,7 @@ public class PntcGenerator {
 		try {
 			writeTileset(tileset);				
 		} catch (IOException | CoordinateConversionException e) {
-			throw new PntcGenerationException("Faild to write 3D-Tiles data files", e); 
+			throw new PntcGenerationException("Failed to write 3D-Tiles data files", e);
 		}		
 
 		Logger.info("Disconnecting and dropping the temporary database"); 
@@ -226,7 +226,7 @@ public class PntcGenerator {
 			} catch (NumberFormatException e) {
 				throw new IOException("Invalid coordinate or color value in source files.", e);
 			} catch (IOException e) {
-				throw new IOException("Faild to read data from source files.", e);
+				throw new IOException("Failed to read data from source files.", e);
 			} 
 		    finally {				
 				try {
