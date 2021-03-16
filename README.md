@@ -3,7 +3,9 @@
 ## Introduction
 The Cesium Point Cloud Generator (CPCG) is a small Java-based tool for the generation of point cloud visualization datasets according to [Cesium 3D Tiles](https://github.com/AnalyticalGraphicsInc/3d-tiles). By utilizing a local portable SQLite database, it takes 3D point cloud datasets given as XYZ text files (possibly including RGB color information for each point) and generates a 3DTiles point cloud to be used for interactive 3D viewing using the Cesium WebGL Digital Globe. The tool is capable of generating multiple levels of detail to increase viewing performance. The generated point cloud datasets can be visualized in a [Cesium](https://cesiumjs.org/index.html)-based web client, such as the [3DCityDB Web Map Client](https://github.com/3dcitydb/3dcitydb-web-map).
 
-The tool was developed by [Zhihang Yao](https://www.gis.bgu.tum.de/unser-team/ehemalige/zhihang-yao/) at the [Chair of Geoinformatics](https://www.gis.bgu.tum.de/startseite/), [Technical University of Munich](https://www.tum.de/).
+The tool was developed by [Zhihang Yao](https://www.gis.bgu.tum.de/unser-team/ehemalige/zhihang-yao/)
+and currently maintained by [Son H. Nguyen](https://www.lrg.tum.de/en/gis/our-team/staff/son-h-nguyen/)
+at the [Chair of Geoinformatics](https://www.lrg.tum.de/en/gis/home/), [Department of Aerospace and Geodesy](https://www.lrg.tum.de/en/flr/home/), [Technical University of Munich](https://www.tum.de/).
 
 ### Project Structure
 The project consists of several packages and folders, which are described as follows:
