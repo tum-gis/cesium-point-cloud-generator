@@ -1,0 +1,77 @@
+plugins {
+    // Apply the application plugin to add support for building a CLI application in Java.
+    id 'application'
+}
+
+repositories {
+
+    maven {
+        url "https://repo.osgeo.org/repository/release/"
+    }
+
+    mavenCentral()
+
+    maven {
+        url "https://citydb.jfrog.io/artifactory/maven/"
+    }
+
+}
+
+dependencies {
+    // Use JUnit test framework.
+    testImplementation 'junit:junit:4.13.2'
+
+//    implementation 'com.google.guava:guava:31.0.1-jre'
+    implementation group: 'org.locationtech.jts', name: 'jts-core', version: '1.19.0'
+    implementation group: 'javax.measure', name: 'jsr-275', version: '0.9.1'
+    implementation group: 'com.eclipsesource.minimal-json', name: 'minimal-json', version: '0.9.5'
+//    implementation group: 'javax.vecmath', name: 'vecmath', version: '1.5.2'
+    implementation group: 'org.xerial', name: 'sqlite-jdbc', version: '3.39.3.0'
+    implementation group: 'org.hsqldb', name: 'hsqldb', version: '2.7.1'
+
+//    // https://mvnrepository.com/artifact/org.geotools/gt-main
+//    implementation group: 'javax.media', name: 'jai-core', version: '1.1.3'
+
+    // https://mvnrepository.com/artifact/org.geotools/gt-main
+    implementation group: 'org.geotools', name: 'gt-main', version: '27.2'
+
+    // https://mvnrepository.com/artifact/org.geotools/gt-referencing
+    implementation group: 'org.geotools', name: 'gt-referencing', version: '27.2'
+
+    // https://mvnrepository.com/artifact/org.geotools/gt-opengis
+    implementation group: 'org.geotools', name: 'gt-opengis', version: '27.2'
+
+    // https://mvnrepository.com/artifact/org.geotools/gt-metadata
+    implementation group: 'org.geotools', name: 'gt-metadata', version: '27.2'
+
+    // https://mvnrepository.com/artifact/org.geotools/gt-epsg-hsql
+    testImplementation group: 'org.geotools', name: 'gt-epsg-hsql', version: '27.2'
+
+    // https://mvnrepository.com/artifact/org.geotools/gt-api
+    implementation group: 'org.geotools', name: 'gt-api', version: '20.0'
+
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
+
+//    implementation group: 'org.citydb', name: 'impexp-plugin-api', version: '4.3.0'
+    implementation group: 'org.citydb', name: 'impexp-core', version: '4.3.0'
+//    implementation group: 'org.citydb', name: 'impexp-utils', version: '4.3.0'
+    implementation group: 'org.citydb', name: 'impexp-plugin-api', version: '4.3.0'
+
+    implementation group: 'org.citydb', name: 'impexp-vis-plugin', version: '5.0.0'
+    implementation group: 'org.citydb', name: 'impexp-client', version: '4.3.0'
+}
+
+application {
+    // Define the main class for the application.
+    mainClass = 'de.tum.gis.tiles3d.Main'
+}
+
+jar {
+    manifest {
+        attributes(
+//                'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+                'Main-Class': 'de.tum.gis.tiles3d.Main'
+        )
+    }
+}
