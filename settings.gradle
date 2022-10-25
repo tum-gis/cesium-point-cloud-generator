@@ -1,2 +1,2 @@
 rootProject.name = 'cesium-point-cloud-generator'
-include('app')
+include('cesium-point-cloud-generator')
