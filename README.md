@@ -14,7 +14,7 @@ The project consists of several packages and folders, which are described as fol
 | ------------- | ------------- |
 | [src](src/)  | Contains all source codes in Java |
 | [data](data/)  | Contains sample data used for testing |
-| [lib](lib/)  | Contains Java libraries (`*.jar`) required for the project |
+| [lib](app/src/main/resources/lib/)  | Contains Java libraries (`*.jar`) required for the project |
 | [viewer](viewer/)  | Contains a Cesium instance used for visualizing the generated point clouds stored in [viewer/output_data](viewer/output_data/) |
 
 ### Run Instructions
@@ -24,7 +24,7 @@ The project consists of several packages and folders, which are described as fol
 	git clone https://github.com/tum-gis/cesium-point-cloud-generator
 	```
 
-2. You can either import the cloned repository in a Java IDE (e.g. Eclipse, NetBeans, etc.) and execute the [Main.java](src/de/tum/gis/tiles3d/) class, or you can run the stand-alone [CesiumPointCloudGenerator.jar](CesiumPointCloudGenerator.jar) file by double-clicking or using the following command:
+2. You can either import the cloned repository in a Java IDE (e.g. Eclipse, NetBeans, etc.) and execute the [Main.java](app/src/main/java/de/tum/gis/tiles3d/) class, or you can run the stand-alone [CesiumPointCloudGenerator.jar](CesiumPointCloudGenerator.jar) file by double-clicking or using the following command:
 	```bash
 	java -jar CesiumPointCloudGenerator.jar
 	```
