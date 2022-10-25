@@ -34,7 +34,7 @@ import javax.swing.border.Border;
 import javax.swing.plaf.basic.BasicSplitPaneDivider;
 import javax.swing.plaf.basic.BasicSplitPaneUI;
 
-import org.citydb.util.gui.GuiUtil;
+import org.citydb.gui.util.GuiUtil;
 
 @SuppressWarnings("serial")
 public final class MainGui extends JFrame {

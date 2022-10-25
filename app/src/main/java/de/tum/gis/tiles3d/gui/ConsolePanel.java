@@ -41,8 +41,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.SwingUtilities;
-
-import org.citydb.util.gui.GuiUtil;
+import org.citydb.gui.util.GuiUtil;
 
 import de.tum.gis.tiles3d.util.Logger;
 

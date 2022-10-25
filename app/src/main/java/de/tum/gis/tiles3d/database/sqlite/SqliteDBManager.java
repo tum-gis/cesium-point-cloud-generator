@@ -33,7 +33,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import com.vividsolutions.jts.geom.Coordinate;
+import org.locationtech.jts.geom.Coordinate;
 
 import de.tum.gis.tiles3d.concurrent.PntcQueryResult;
 import de.tum.gis.tiles3d.database.DBManager;

@@ -36,8 +36,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.citydb.api.concurrent.PoolSizeAdaptationStrategy;
-import org.citydb.api.concurrent.WorkerPool;
+import org.citydb.util.concurrent.PoolSizeAdaptationStrategy;
+import org.citydb.util.concurrent.WorkerPool;
 
 import com.eclipsesource.json.Json;
 import com.eclipsesource.json.JsonArray;

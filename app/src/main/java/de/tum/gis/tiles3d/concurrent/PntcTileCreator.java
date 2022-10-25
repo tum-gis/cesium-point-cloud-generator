@@ -32,8 +32,9 @@ import java.nio.file.Paths;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
-import org.citydb.api.concurrent.DefaultWorkerImpl;
-import com.vividsolutions.jts.geom.Coordinate;
+import org.citydb.util.concurrent.DefaultWorker;
+import org.locationtech.jts.geom.Coordinate;
+
 
 import de.tum.gis.tiles3d.database.DBManager;
 import de.tum.gis.tiles3d.generator.PntcConfig;
@@ -41,7 +42,7 @@ import de.tum.gis.tiles3d.model.PointCloudModel;
 import de.tum.gis.tiles3d.util.CharacterConverter;
 import de.tum.gis.tiles3d.util.Logger;
 
-public class PntcTileCreator extends DefaultWorkerImpl<PntcTileWork>{
+public class PntcTileCreator extends DefaultWorker<PntcTileWork>{
 	private AtomicInteger totalNumberOfTiles;
 	private DBManager dbManager;
 	

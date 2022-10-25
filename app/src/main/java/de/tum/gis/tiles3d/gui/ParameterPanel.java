@@ -41,7 +41,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
-import org.citydb.util.gui.GuiUtil;
+import org.citydb.gui.util.GuiUtil;
 
 import de.tum.gis.tiles3d.database.sqlite.SqliteDBManagerFactory;
 import de.tum.gis.tiles3d.generator.PntcConfig;

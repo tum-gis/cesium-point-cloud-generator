@@ -26,8 +26,8 @@ package de.tum.gis.tiles3d.concurrent;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.citydb.api.concurrent.Worker;
-import org.citydb.api.concurrent.WorkerFactory;
+import org.citydb.util.concurrent.Worker;
+import org.citydb.util.concurrent.WorkerFactory;
 
 import de.tum.gis.tiles3d.database.DBManager;
 import de.tum.gis.tiles3d.generator.PntcConfig;

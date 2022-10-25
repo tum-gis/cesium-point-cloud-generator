@@ -26,8 +26,7 @@ package de.tum.gis.tiles3d.concurrent;
 
 import java.awt.Color;
 import java.util.List;
-
-import com.vividsolutions.jts.geom.Coordinate;
+import org.locationtech.jts.geom.Coordinate;
 
 public class PntcQueryResult {
 	

@@ -34,7 +34,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 
-import org.citydb.util.gui.GuiUtil;
+import org.citydb.gui.util.GuiUtil;
 
 
 @SuppressWarnings("serial")
